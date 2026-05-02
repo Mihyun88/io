@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0048)file:///C:/Users/ellarang/Downloads/index_5.html -->
+<!-- saved from url=(0048)file:///C:/Users/ellarang/Downloads/index_6.html -->
 <html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -543,18 +543,19 @@ body {
   }
   
   .location-card {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 20px;
+    text-align: center;
+    padding: 28px 24px;
   }
   
   .location-header {
-    margin-bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
   }
   
   .location-buttons {
-    width: 240px;
+    max-width: 360px;
+    margin: 0 auto;
   }
 }
 </style>
@@ -620,7 +621,7 @@ body {
       <p class="section-subtitle">지도와 상세 길찾기 안내</p>
     </div>
 
-    <div class="location-card scroll-reveal">
+    <div class="location-card scroll-reveal visible">
       <div class="location-header">
         <div class="location-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -650,7 +651,7 @@ body {
       </div>
     </div>
 
-    <div class="location-card scroll-reveal">
+    <div class="location-card scroll-reveal visible">
       <div class="location-header">
         <div class="location-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
