@@ -73,20 +73,24 @@ a{color:var(--accent)}
   <div id="out"></div>
 </div>
 
+<script src="keys.js"></script>
 <script>
 const $ = id => document.getElementById(id);
 const store = {
   get(k) { try { return localStorage.getItem(k) || ''; } catch (e) { return ''; } },
   set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
 };
-// 사무실 공용 기본 키 (자동 수집 봇이 바로 읽지 못하게 뒤집은 base64로 넣어둠, 보안 장치는 아님)
-const EMBED = JSON.parse(atob('==QfiAjYjJ2NmVTMhVmN3U2N1cDMxQ2MyMGMkFTZlRjZzQzYiojIvF2ahtmIsICMGlTMDRER4MjRGZUL5cTO50COGZDNtgzNycTLwITM2QjQGBjI6Iyd2JCLiQ0MlQ0MlEVUmJFS4E3SoJnbrdEa4oVN5dlNY5mQyUydyZVRZJlW20maRpUcF5WbStkZ4p0YT5mQ6lUePlUZvVHdSx0QIZkMlYkMl4kR0VjboRDZw5kekN2bWRmWWl3ZHRneiojIhRXYkJye'.split('').reverse().join('')));
+// 사무실 공용 기본 키는 keys.js 에 따로 둔다 (자동 수집 봇이 바로 읽지 못하게 뒤집은 base64, 보안 장치는 아님)
+const EMBED = (() => {
+  try { return JSON.parse(atob(String(window.GS_KEYS || '').split('').reverse().join(''))); } catch (e) { return {}; }
+})();
 let KEYS = {};
 // 인증키 설정에 따로 저장한 키가 있으면 그걸 쓰고, 없으면 기본 키를 쓴다
 function loadKeys() {
   const s = { data: store.get('gs_data'), vw: store.get('gs_vw'), kakao: store.get('gs_kakao') };
-  KEYS = { data: s.data || EMBED.data, vw: s.vw || EMBED.vw, kakao: s.kakao || EMBED.kakao };
+  KEYS = { data: s.data || EMBED.data || '', vw: s.vw || EMBED.vw || '', kakao: s.kakao || EMBED.kakao || '' };
   $('kData').value = s.data; $('kVw').value = s.vw; $('kKakao').value = s.kakao;
+  if (!KEYS.data || !KEYS.vw) $('keys').hidden = false;
 }
 $('btnKeys').onclick = () => { $('keys').hidden = !$('keys').hidden; };
 $('saveKeys').onclick = () => {
@@ -210,11 +214,14 @@ async function allItems(url) {
 }
 async function getBuilding(B, dong, ho) {
   const key = dataKey();
-  const [titles, recapJ] = await Promise.all([
+  const [titles, recapJ, basisJ] = await Promise.all([
     allItems(`${BR}/getBrTitleInfo?serviceKey=${key}&${B}`),
-    getJson(`${BR}/getBrRecapTitleInfo?serviceKey=${key}&${B}&numOfRows=5&pageNo=1`).catch(() => null)
+    getJson(`${BR}/getBrRecapTitleInfo?serviceKey=${key}&${B}&numOfRows=5&pageNo=1`).catch(() => null),
+    getJson(`${BR}/getBrBasisOulnInfo?serviceKey=${key}&${B}&numOfRows=5&pageNo=1`).catch(() => null)
   ]);
   const recap = arr(recapJ?.response?.body?.items?.item)[0] || null;
+  // 기본개요에 대장상 지역·지구·구역이 있어 토지이용계획 보조로 쓴다
+  const basis = arr(basisJ?.response?.body?.items?.item).find(b => b.jiyukCdNm || b.jiguCdNm || b.guyukCdNm) || null;
   let title = (dong && titles.find(t => normDong(t.dongNm) === dong))
     || titles.find(t => String(t.mainAtchGbCd) === '0') || titles[0] || {};
   let expos = [];
@@ -230,7 +237,7 @@ async function getBuilding(B, dong, ho) {
       expos = await allItems(eu);
     }
   }
-  return { title, recap, expos };
+  return { title, recap, expos, basis };
 }
 
 // ---------- 브이월드 국가중점데이터 ----------
@@ -323,7 +330,7 @@ async function getNear(x, y) {
 
 // ---------- 화면 ----------
 function render(R) {
-  const t = R.bld.title || {}, recap = R.bld.recap, expos = R.bld.expos || [];
+  const t = R.bld.title || {}, recap = R.bld.recap, expos = R.bld.expos || [], basis = R.bld.basis;
   const L = R.land;
   const jeon = expos.filter(e => String(e.exposPubuseGbCd) === '1');
   const gong = expos.filter(e => String(e.exposPubuseGbCd) !== '1');
@@ -382,7 +389,11 @@ function render(R) {
   row('전용면적(㎡)', jeonArea, R.ho && !jeon.length ? `${esc(R.ho)}호를 대장에서 찾지 못했습니다. 동/호 표기를 확인하세요.` : (gongArea ? `공용면적 합계 ${gongArea} ㎡` : ''));
   row('대지지분', '', '등기부(대지권) 확인');
   row('준공년도', useAprTxt, ua.length === 8 ? `사용승인일 ${ua.slice(0, 4)}-${ua.slice(4, 6)}-${ua.slice(6, 8)}` : '');
-  row('건축물대장상 용도', unitUse, t.etcPurps ? `건물 전체: ${esc(t.etcPurps)}` : '');
+  // 호를 넣지 않았거나 전유부가 없으면(단독·일반건물) 표제부 주용도를 쓴다
+  const bldUse = unitUse || (t.etcPurps || '').trim() || t.mainPurpsCdNm || '';
+  row('건축물대장상 용도', bldUse, unitUse
+    ? (t.etcPurps ? `건물 전체: ${esc(t.etcPurps)}` : '')
+    : (R.ho ? '호별 용도를 찾지 못해 건물 전체 용도를 표시' : '건물 전체 용도 (호를 넣으면 호별 용도가 나옵니다)'));
   row('구조', t.strctCdNm);
   row('방향', '', '현장 확인');
   row('내진설계 적용여부', quake, quake === '미적용' ? '대장에 값이 비어 미적용으로 나오는 경우가 많습니다. 원본 대장 확인' : '');
@@ -405,14 +416,21 @@ function render(R) {
     const dist = names.filter(n => /지구(\(|$)/.test(n) && !/지구단위/.test(n));
     const used = new Set([...area, ...zone, ...permit, ...plan, ...fac, ...dist]);
     const etc = names.filter(n => !used.has(n));
-    row('용도지역', area.join(', '));
-    row('용도지구', dist.join(', '), dist.length ? '' : '조회 결과 없음 (해당없음 가능)');
-    row('용도구역', zone.join(', '), zone.length ? '' : '조회 결과 없음 (해당없음 가능)');
-    row('도시·군계획시설', fac.join(', '));
-    row('허가·신고 구역', permit.length ? '토지거래허가구역' : '', permit.length ? '' : '조회 결과 없음');
-    row('지구단위계획구역', plan.length ? '지구단위계획구역' : '', plan.length ? '' : '조회 결과 없음');
-    row('그 밖의 이용제한', etc.join(', '));
+    // 토지이용계획은 해당 필지에 지정된 내역을 모두 돌려주므로, 없으면 해당없음으로 본다
+    const none = '토지이용계획에 지정 내역 없음';
+    row('용도지역', area.join(', ') || basis?.jiyukCdNm || '', area.length ? '' : (basis?.jiyukCdNm ? '건축물대장 기재 값' : ''));
+    row('용도지구', dist.join(', ') || '해당없음', dist.length ? '' : none);
+    row('용도구역', zone.join(', ') || '해당없음', zone.length ? '' : none);
+    row('도시·군계획시설', fac.join(', ') || '해당없음', fac.length ? '' : none);
+    row('허가·신고 구역', permit.length ? '토지거래허가구역' : '해당없음', permit.length ? '' : none);
+    row('지구단위계획구역', plan.length ? '지구단위계획구역' : '해당없음', plan.length ? '' : none);
+    row('그 밖의 이용제한', etc.join(', ') || '해당없음');
     noteRow('투기지역·투기과열지구 여부는 이 자료에 없습니다. 국토교통부 고시로 확인하세요.');
+  } else if (basis) {
+    const note = `건축물대장 기재 값 (토지이용계획 조회 실패, ${link('https://www.eum.go.kr/', '토지이음')}에서 대조)`;
+    row('용도지역', basis.jiyukCdNm || '', note);
+    row('용도지구', basis.jiguCdNm || '해당없음', note);
+    row('용도구역', basis.guyukCdNm || '해당없음', note);
   } else {
     row('용도지역·지구·구역', '', `조회하지 못했습니다. ${link('https://www.eum.go.kr/', '토지이음')}에서 확인`);
   }
