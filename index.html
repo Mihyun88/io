@@ -1,757 +1,481 @@
-<!DOCTYPE html>
-<!-- saved from url=(0048)file:///C:/Users/ellarang/Downloads/index_6.html -->
-<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>착한언니복덕방 | SINCE 2014</title>
-<meta name="description" content="신촌자이엘라, 마포그랑자이 전문 부동산 - 착한언니복덕방">
-
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link rel="preconnect" href="https://cdn.jsdelivr.net/">
-<link rel="stylesheet" as="style" crossorigin="" href="./index_files/pretendardvariable-dynamic-subset.min.css">
-<link href="./index_files/css2" rel="stylesheet">
-
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- 검색엔진 수집·보관·미리보기 금지 -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate">
+<meta name="googlebot" content="noindex, nofollow, noarchive">
+<meta name="Yeti" content="noindex, nofollow">
+<meta name="bingbot" content="noindex, nofollow">
+<title>확인설명서 조회</title>
 <style>
-:root {
-  --brand-pink: #E91E5E;
-  --brand-pink-dark: #C9134E;
-  --brand-pink-light: #FF4080;
-  --brand-pink-soft: #FFF0F5;
-  --ink: #1a1a1a;
-  --ink-soft: #4a4a4a;
-  --ink-muted: #8a8a8a;
-  --bg: #FAFAFA;
-  --card: #FFFFFF;
-  --line: #F0F0F0;
-  --shadow-sm: 0 2px 8px rgba(233, 30, 94, 0.06);
-  --shadow-md: 0 8px 24px rgba(233, 30, 94, 0.10);
-  --shadow-lg: 0 16px 48px rgba(233, 30, 94, 0.14);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Pretendard Variable', Pretendard, 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--ink);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-}
-
-/* ===== HERO SECTION ===== */
-.hero {
-  background: #FFFFFF;
-  padding: 60px 24px 60px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  border-bottom: 1px solid var(--line);
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -30%;
-  right: -20%;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(233, 30, 94, 0.06) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: -30%;
-  left: -10%;
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(circle, rgba(255, 64, 128, 0.05) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
-  margin: 0 auto;
-  animation: fadeUp 0.8s ease-out;
-}
-
-.logo-mark {
-  width: 96px;
-  height: 96px;
-  margin: 0 auto 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--brand-pink);
-  border-radius: 22px;
-  padding: 18px;
-  box-shadow: 0 8px 24px rgba(233, 30, 94, 0.25);
-}
-
-.logo-mark svg {
-  width: 100%;
-  height: 100%;
-}
-
-.logo-mark svg path {
-  fill: white;
-}
-
-.since-badge {
-  display: inline-block;
-  padding: 5px 14px;
-  background: var(--brand-pink-soft);
-  border-radius: 100px;
-  color: var(--brand-pink);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 14px;
-  border: 1px solid rgba(233, 30, 94, 0.15);
-}
-
-.brand-name {
-  font-size: 36px;
-  font-weight: 800;
-  color: var(--brand-pink);
-  letter-spacing: -0.03em;
-  margin-bottom: 10px;
-  line-height: 1.2;
-}
-
-.brand-tagline {
-  font-size: 14px;
-  color: var(--ink-soft);
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  line-height: 1.7;
-}
-
-.brand-tagline strong {
-  font-weight: 600;
-  color: var(--ink);
-}
-
-/* ===== SECTION ===== */
-.section {
-  padding: 40px 20px;
-  max-width: 560px;
-  margin: 0 auto;
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: 28px;
-}
-
-.section-label {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  color: var(--brand-pink);
-  margin-bottom: 8px;
-  text-transform: uppercase;
-}
-
-.section-title {
-  font-size: 26px;
-  font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.02em;
-}
-
-.section-subtitle {
-  font-size: 14px;
-  color: var(--ink-muted);
-  margin-top: 8px;
-  line-height: 1.7;
-}
-
-/* ===== CONTACT CARDS ===== */
-.contact-section {
-  padding-top: 32px;
-  padding-bottom: 24px;
-  position: relative;
-  z-index: 2;
-}
-
-.branch-card {
-  background: var(--card);
-  border-radius: 24px;
-  padding: 28px 24px;
-  margin-bottom: 20px;
-  box-shadow: var(--shadow-md);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-
-.branch-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-}
-
-.branch-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, var(--brand-pink), var(--brand-pink-light));
-}
-
-.branch-tag {
-  display: inline-block;
-  font-size: 26px;
-  font-weight: 800;
-  color: var(--brand-pink);
-  margin-bottom: 8px;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-
-.branch-name {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: 4px;
-  letter-spacing: -0.02em;
-}
-
-.branch-desc {
-  font-size: 15px;
-  color: var(--ink-muted);
-  margin-bottom: 22px;
-  font-weight: 500;
-}
-
-.call-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  padding: 18px 20px;
-  background: linear-gradient(135deg, var(--brand-pink) 0%, var(--brand-pink-light) 100%);
-  color: white;
-  border: none;
-  border-radius: 16px;
-  font-size: 18px;
-  font-weight: 700;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 14px rgba(233, 30, 94, 0.3);
-  letter-spacing: -0.01em;
-  font-family: inherit;
-}
-
-.call-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(233, 30, 94, 0.4);
-}
-
-.call-button:active {
-  transform: translateY(0);
-}
-
-.call-icon {
-  width: 22px;
-  height: 22px;
-  flex-shrink: 0;
-}
-
-.call-number {
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  font-size: 17px;
-  letter-spacing: 0.02em;
-}
-
-/* ===== LOCATION SECTION ===== */
-.location-section {
-  background: white;
-  padding: 40px 20px;
-  margin-top: 0;
-  border-top: 1px solid var(--line);
-}
-
-.location-card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 24px;
-  margin-bottom: 16px;
-  transition: all 0.25s ease;
-}
-
-.location-card:hover {
-  border-color: var(--brand-pink-light);
-  box-shadow: var(--shadow-sm);
-}
-
-.location-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 18px;
-}
-
-.location-icon {
-  width: 42px;
-  height: 42px;
-  background: var(--brand-pink-soft);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.location-icon svg {
-  width: 22px;
-  height: 22px;
-  color: var(--brand-pink);
-}
-
-.location-name {
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-}
-
-.location-buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.location-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 13px 12px;
-  background: var(--bg);
-  color: var(--ink-soft);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  font-family: inherit;
-}
-
-.location-btn:hover {
-  background: var(--brand-pink);
-  color: white;
-  border-color: var(--brand-pink);
-  transform: translateY(-1px);
-}
-
-.location-btn svg {
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
-}
-
-/* ===== SNS SECTION ===== */
-.sns-section {
-  background: linear-gradient(180deg, white 0%, var(--brand-pink-soft) 100%);
-  padding: 50px 20px 60px;
-  text-align: center;
-}
-
-.sns-grid {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-top: 24px;
-}
-
-.sns-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  transition: transform 0.25s ease;
-}
-
-.sns-link:hover {
-  transform: translateY(-4px);
-}
-
-.sns-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.25s ease;
-}
-
-.sns-link:hover .sns-icon {
-  box-shadow: var(--shadow-md);
-}
-
-.sns-icon svg {
-  width: 28px;
-  height: 28px;
-}
-
-.sns-icon.instagram {
-  background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-}
-
-.sns-icon.instagram svg {
-  color: white;
-}
-
-.sns-icon.youtube {
-  background: #FF0000;
-}
-
-.sns-icon.youtube svg {
-  color: white;
-}
-
-.sns-icon.blog {
-  background: #03C75A;
-}
-
-.sns-icon.blog svg {
-  color: white;
-}
-
-.sns-label {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--ink-soft);
-  letter-spacing: 0.02em;
-}
-
-/* ===== FOOTER ===== */
-.footer {
-  background: var(--ink);
-  padding: 32px 20px;
-  text-align: center;
-}
-
-.footer-text {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 1.8;
-}
-
-.footer-brand {
-  font-size: 14px;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 8px;
-  letter-spacing: -0.01em;
-}
-
-/* ===== ANIMATIONS ===== */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.scroll-reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.scroll-reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===== RESPONSIVE ===== */
-@media (min-width: 640px) {
-  .hero {
-    padding: 80px 24px 70px;
-  }
-  
-  .brand-name {
-    font-size: 42px;
-  }
-  
-  .section-title {
-    font-size: 30px;
-  }
-  
-  .branch-card {
-    padding: 32px 28px;
-  }
-  
-  .branch-tag {
-    font-size: 30px;
-  }
-}
-
-@media (min-width: 768px) {
-  .contact-section {
-    max-width: 760px;
-  }
-  
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  
-  .branch-card {
-    margin-bottom: 0;
-  }
-  
-  .location-section .section {
-    max-width: 760px;
-  }
-  
-  .location-card {
-    text-align: center;
-    padding: 28px 24px;
-  }
-  
-  .location-header {
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .location-buttons {
-    max-width: 360px;
-    margin: 0 auto;
-  }
-}
+:root{--bg:#f6f7f9;--card:#fff;--line:#dde1e6;--text:#1f2328;--muted:#667085;--accent:#3b6fd8;--accent-bg:#eef3fb;--warn-bg:#fff4e5;--warn-line:#f0c48a;--need:#b26a00}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif;font-size:15px}
+.wrap{max-width:880px;margin:0 auto;padding:20px 16px 60px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+h1{font-size:20px;margin:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:14px}
+form.search{display:grid;grid-template-columns:1fr 90px 90px auto;gap:8px}
+input{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font-size:15px;font-family:inherit}
+button{padding:9px 14px;border:1px solid var(--line);border-radius:8px;background:#fff;cursor:pointer;font-size:14px;font-family:inherit}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+.keys label{display:block;font-size:13px;color:var(--muted);margin-bottom:10px}
+.keys input{margin-top:4px}
+#status{color:var(--muted);font-size:14px;min-height:20px;margin:4px 2px 10px}
+h2{font-size:16px;margin:22px 0 8px;padding:7px 10px;background:var(--accent-bg);border-left:4px solid var(--accent);border-radius:4px}
+.title{font-size:18px;font-weight:700;margin:0 0 4px}
+.sub{color:var(--muted);font-size:13px}
+table{width:100%;border-collapse:collapse;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left;font-size:14px}
+th{width:170px;background:#fafafa;font-weight:600}
+.v{font-weight:600}
+.need{color:var(--need)}
+td button{margin-left:8px;font-size:12px;padding:2px 8px}
+.note{color:var(--muted);font-size:12px;margin-top:3px}
+.warn{background:var(--warn-bg);border:1px solid var(--warn-line);padding:9px 12px;border-radius:8px;font-size:13px;margin:10px 0}
+a{color:var(--accent)}
+@media (max-width:640px){
+  form.search{grid-template-columns:1fr 1fr}
+  form.search #addr{grid-column:1/-1}
+  form.search button{grid-column:1/-1}
+  th{width:105px}
+}
+@media print{header,.card.input,#keys{display:none}body{background:#fff}}
 </style>
 </head>
 <body>
+<div class="wrap">
+  <header>
+    <h1>확인설명서 조회</h1>
+    <button id="btnKeys" type="button">인증키 설정</button>
+  </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <div class="logo-mark">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50 18 L88 55 L80 55 L80 82 L20 82 L20 55 L12 55 Z M30 28 L38 28 L38 42 L30 35 Z" fill="white"></path>
-      </svg>
-    </div>
-    <div class="since-badge">SINCE 2014</div>
-    <h1 class="brand-name">착한언니복덕방</h1>
-    <p class="brand-tagline">
-      <strong>이대 · 신촌 · 마포 1등 부동산</strong><br>
-      아파트 · 오피스텔 · 상가 전문
-    </p>
-  </div>
-</section>
-
-<!-- CONTACT (전화하기) -->
-<section class="section contact-section">
-  <div class="section-header">
-    <div class="section-label">CONTACT</div>
-    <h2 class="section-title">문의 전화</h2>
-    <p class="section-subtitle">친절하게 상담해드립니다</p>
+  <div class="card keys" id="keys" hidden>
+    <label>공공데이터포털 인증키 (Encoding 키)<input id="kData" autocomplete="off" spellcheck="false"></label>
+    <label>브이월드 인증키<input id="kVw" autocomplete="off" spellcheck="false"></label>
+    <label>카카오 REST API 키 (선택, 학교·지하철역 검색이 더 정확해짐)<input id="kKakao" autocomplete="off" spellcheck="false"></label>
+    <p class="note">키는 이 브라우저에만 저장됩니다. 페이지 파일이나 GitHub에는 올라가지 않습니다.</p>
+    <button class="primary" id="saveKeys" type="button">저장</button>
   </div>
 
-  <div class="contact-grid">
-    <div class="branch-card scroll-reveal visible">
-      <div class="branch-tag">신촌자이엘라점</div>
-      <p class="branch-desc">신촌자이엘라 부동산</p>
-      <a href="tel:02-364-4080" class="call-button">
-        <svg class="call-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-        </svg>
-        <span class="call-number">02-364-4080</span>
-      </a>
-    </div>
-
-    <div class="branch-card scroll-reveal visible">
-      <div class="branch-tag">마포그랑자이점</div>
-      <p class="branch-desc">마포그랑자이 부동산</p>
-      <a href="tel:02-707-3434" class="call-button">
-        <svg class="call-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-        </svg>
-        <span class="call-number">02-707-3434</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- LOCATION (찾아오는 길) -->
-<section class="location-section">
-  <div class="section">
-    <div class="section-header">
-      <div class="section-label">LOCATION</div>
-      <h2 class="section-title">찾아오는 길</h2>
-      <p class="section-subtitle">지도와 상세 길찾기 안내</p>
-    </div>
-
-    <div class="location-card scroll-reveal visible">
-      <div class="location-header">
-        <div class="location-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-            <circle cx="12" cy="10" r="3"></circle>
-          </svg>
-        </div>
-        <div class="location-name">신촌자이엘라점</div>
-      </div>
-      <div class="location-buttons">
-        <a href="https://naver.me/x3jEDn2g" target="_blank" rel="noopener" class="location-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-            <circle cx="12" cy="10" r="3"></circle>
-          </svg>
-          네이버 지도
-        </a>
-        <a href="https://blog.naver.com/ellarang/220772283530" target="_blank" rel="noopener" class="location-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-            <polyline points="14 2 14 8 20 8"></polyline>
-            <line x1="16" y1="13" x2="8" y2="13"></line>
-            <line x1="16" y1="17" x2="8" y2="17"></line>
-          </svg>
-          상세 길찾기
-        </a>
-      </div>
-    </div>
-
-    <div class="location-card scroll-reveal visible">
-      <div class="location-header">
-        <div class="location-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-            <circle cx="12" cy="10" r="3"></circle>
-          </svg>
-        </div>
-        <div class="location-name">마포그랑자이점</div>
-      </div>
-      <div class="location-buttons">
-        <a href="https://naver.me/xNL2Virc" target="_blank" rel="noopener" class="location-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-            <circle cx="12" cy="10" r="3"></circle>
-          </svg>
-          네이버 지도
-        </a>
-        <a href="https://blog.naver.com/ellarang/224271542518" target="_blank" rel="noopener" class="location-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-            <polyline points="14 2 14 8 20 8"></polyline>
-            <line x1="16" y1="13" x2="8" y2="13"></line>
-            <line x1="16" y1="17" x2="8" y2="17"></line>
-          </svg>
-          상세 길찾기
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SNS -->
-<section class="sns-section">
-  <div class="section-header">
-    <div class="section-label">FOLLOW US</div>
-    <h2 class="section-title">SNS</h2>
-    <p class="section-subtitle">착한언니의 일상과 매물 소식</p>
+  <div class="card input">
+    <form class="search" id="f">
+      <input id="addr" placeholder="주소 (예: 서대문구 대현동 37-32 617호)" required>
+      <input id="dong" placeholder="동">
+      <input id="ho" placeholder="호">
+      <button class="primary" type="submit">조회</button>
+    </form>
   </div>
 
-  <div class="sns-grid">
-    <a href="https://www.instagram.com/goodsister4080/" target="_blank" rel="noopener" class="sns-link">
-      <div class="sns-icon instagram">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
-        </svg>
-      </div>
-      <span class="sns-label">Instagram</span>
-    </a>
-
-    <a href="https://www.youtube.com/@%EC%B0%A9%ED%95%9C%EC%96%B8%EB%8B%88%EB%B3%B5%EB%8D%95%EB%B0%A9" target="_blank" rel="noopener" class="sns-link">
-      <div class="sns-icon youtube">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
-        </svg>
-      </div>
-      <span class="sns-label">YouTube</span>
-    </a>
-
-    <a href="https://blog.naver.com/ellarang" target="_blank" rel="noopener" class="sns-link">
-      <div class="sns-icon blog">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 1.999H4c-1.103 0-2 .897-2 2v15c0 1.103.897 2 2 2h12.586l5.707-5.707V3.999c0-1.103-.897-2-2-2zM4 18.999v-15h16l.002 11H15v5.5l-.001-.001H4z"></path>
-          <path d="M7 8h10v2H7zm0 4h7v2H7z"></path>
-        </svg>
-      </div>
-      <span class="sns-label">Blog</span>
-    </a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-brand">착한언니복덕방</div>
-  <p class="footer-text">
-    SINCE 2014 · 신촌자이엘라 · 마포그랑자이<br>
-    © 착한언니복덕방. All rights reserved.
-  </p>
-</footer>
+  <div id="status"></div>
+  <div id="out"></div>
+</div>
 
 <script>
-// Scroll reveal animation
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, index) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, index * 100);
-      observer.unobserve(entry.target);
+const $ = id => document.getElementById(id);
+const store = {
+  get(k) { try { return localStorage.getItem(k) || ''; } catch (e) { return ''; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+let KEYS = {};
+function loadKeys() {
+  KEYS = { data: store.get('gs_data'), vw: store.get('gs_vw'), kakao: store.get('gs_kakao') };
+  $('kData').value = KEYS.data; $('kVw').value = KEYS.vw; $('kKakao').value = KEYS.kakao;
+  if (!KEYS.data || !KEYS.vw) $('keys').hidden = false;
+}
+$('btnKeys').onclick = () => { $('keys').hidden = !$('keys').hidden; };
+$('saveKeys').onclick = () => {
+  store.set('gs_data', $('kData').value.trim());
+  store.set('gs_vw', $('kVw').value.trim());
+  store.set('gs_kakao', $('kKakao').value.trim());
+  loadKeys();
+  $('keys').hidden = true;
+  setStatus('인증키를 저장했습니다.');
+};
+
+// ---------- 공통 ----------
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const enc = encodeURIComponent;
+const arr = x => (x == null || x === '') ? [] : (Array.isArray(x) ? x : [x]);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const normDong = s => String(s || '').trim().replace(/동$/, '');
+const setStatus = t => { $('status').textContent = t; };
+// Decoding 키를 붙여넣어도 동작하도록 % 가 없으면 인코딩한다
+const dataKey = () => KEYS.data.includes('%') ? KEYS.data : enc(KEYS.data);
+
+async function getJson(url, headers) {
+  for (let i = 0; i < 4; i++) {
+    try {
+      const r = await fetch(url, { headers });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return await r.json();
+    } catch (e) {
+      if (i === 3) throw e;
+      await sleep(1500);
     }
+  }
+}
+// 브이월드는 브라우저 직접 호출(CORS)을 막아서 JSONP로 부른다
+function jsonp(url) {
+  return new Promise((resolve, reject) => {
+    const cb = '_vw' + Date.now() + Math.random().toString(36).slice(2);
+    const s = document.createElement('script');
+    const done = () => { delete window[cb]; s.remove(); };
+    const tm = setTimeout(() => { window[cb] = () => {}; s.remove(); reject(new Error('timeout')); }, 12000);
+    window[cb] = d => { clearTimeout(tm); done(); resolve(d); };
+    s.onerror = () => { clearTimeout(tm); done(); reject(new Error('load error')); };
+    s.src = url + '&callback=' + cb;
+    document.head.appendChild(s);
   });
-}, {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
+}
+async function vwSearch(params) {
+  for (let i = 0; i < 3; i++) {
+    try {
+      return await jsonp(`https://api.vworld.kr/req/search?service=search&request=search&version=2.0&crs=EPSG:4326&format=json&key=${KEYS.vw}&${params}`);
+    } catch (e) {
+      if (i === 2) throw e;
+      await sleep(1000);
+    }
+  }
+}
+function distance(x1, y1, x2, y2) {
+  const R = 6371000, rad = Math.PI / 180;
+  const p1 = y1 * rad, p2 = y2 * rad, dp = (y2 - y1) * rad, dl = (x2 - x1) * rad;
+  const a = Math.sin(dp / 2) ** 2 + Math.cos(p1) * Math.cos(p2) * Math.sin(dl / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(a));
+}
+// 직선거리 x1.3 을 실제 길 거리로 보고 도보 67m/분, 차량 약 18km/h(신호 포함)로 계산
+const walk = d => Math.max(1, Math.ceil(d * 1.3 / 67));
+const car = d => Math.max(1, Math.ceil(d * 1.3 / 300));
+const trip = d => walk(d) <= 20 ? `도보 약 ${walk(d)}분` : `차량 약 ${car(d)}분 (도보 ${walk(d)}분)`;
+
+// ---------- 조회 ----------
+async function lookup(addrIn, dongIn, hoIn) {
+  let ho = hoIn, dong = dongIn;
+  let m;
+  if (!ho && (m = addrIn.match(/(\d{2,5})\s*호/))) ho = m[1];
+  if (!dong && (m = addrIn.match(/(\d{1,4}|[A-Za-z가-힣])동\s*\d{2,5}\s*호/))) dong = m[1];
+  ho = String(ho || '').replace(/호$/, '').trim();
+  dong = normDong(dong);
+  let query = addrIn.replace(/번지/g, '');
+  if ((m = query.match(/^(.*?(?:동|리|가|로|길)\s*(?:산\s*)?\d+(?:-\d+)?)/))) query = m[1];
+
+  // 1. 주소 -> 지번코드(PNU), 좌표
+  setStatus('주소 확인 중…');
+  let hit = null;
+  for (const cat of ['parcel', 'road']) {
+    const r = await vwSearch(`size=5&page=1&query=${enc(query)}&type=address&category=${cat}`);
+    if (r.response?.status === 'OK') { hit = arr(r.response.result.items)[0]; break; }
+  }
+  if (!hit) throw new Error(`주소를 찾지 못했습니다: ${query}`);
+  const x = +hit.point.x, y = +hit.point.y;
+  let pnu = String(hit.id);
+  if (!/^\d{19}$/.test(pnu) && hit.address?.parcel) {
+    // 도로명으로 찾은 경우 지번 주소로 다시 검색해 PNU를 얻는다
+    const r = await vwSearch(`size=5&page=1&query=${enc(hit.address.parcel)}&type=address&category=parcel`);
+    if (r.response?.status === 'OK') pnu = String(arr(r.response.result.items)[0].id);
+  }
+  if (!/^\d{19}$/.test(pnu)) throw new Error('지번 코드를 찾지 못했습니다. 지번 주소로 다시 넣어 주세요.');
+  const parcelAddr = hit.address?.parcel || query;
+  const roadAddr = hit.address?.road || '';
+  const B = `sigunguCd=${pnu.slice(0, 5)}&bjdongCd=${pnu.slice(5, 10)}&platGbCd=${pnu[10] === '2' ? '1' : '0'}&bun=${pnu.slice(11, 15)}&ji=${pnu.slice(15, 19)}&_type=json`;
+
+  setStatus('건축물대장·공시지가·주변시설 조회 중…');
+  const [bld, land, near] = await Promise.all([
+    getBuilding(B, dong, ho).catch(e => ({ error: e.message })),
+    getLand(pnu, dong, ho),
+    getNear(x, y)
+  ]);
+  return { query, dong, ho, pnu, parcelAddr, roadAddr, bld, land, near };
+}
+
+// ---------- 건축물대장 ----------
+const BR = 'https://apis.data.go.kr/1613000/BldRgstHubService';
+async function allItems(url) {
+  // 단지형 아파트처럼 100건을 넘는 경우가 많아 페이지를 끝까지 넘긴다
+  let all = [];
+  for (let p = 1; p <= 20; p++) {
+    const j = await getJson(`${url}&numOfRows=100&pageNo=${p}`);
+    const body = j.response?.body || {};
+    const got = arr(body.items?.item);
+    all = all.concat(got);
+    if (!got.length || all.length >= +body.totalCount) break;
+  }
+  return all;
+}
+async function getBuilding(B, dong, ho) {
+  const key = dataKey();
+  const [titles, recapJ] = await Promise.all([
+    allItems(`${BR}/getBrTitleInfo?serviceKey=${key}&${B}`),
+    getJson(`${BR}/getBrRecapTitleInfo?serviceKey=${key}&${B}&numOfRows=5&pageNo=1`).catch(() => null)
+  ]);
+  const recap = arr(recapJ?.response?.body?.items?.item)[0] || null;
+  let title = (dong && titles.find(t => normDong(t.dongNm) === dong))
+    || titles.find(t => String(t.mainAtchGbCd) === '0') || titles[0] || {};
+  let expos = [];
+  if (ho) {
+    const eu = `${BR}/getBrExposPubuseAreaInfo?serviceKey=${key}&${B}&hoNm=${enc(ho)}`;
+    if (dong) {
+      // 대장의 동 표기가 "105동" / "105" 로 갈려서 둘 다 시도
+      for (const dn of [dong + '동', dong]) {
+        expos = (await allItems(`${eu}&dongNm=${enc(dn)}`)).filter(e => normDong(e.dongNm) === dong);
+        if (expos.length) break;
+      }
+    } else {
+      expos = await allItems(eu);
+    }
+  }
+  return { title, recap, expos };
+}
+
+// ---------- 브이월드 국가중점데이터 ----------
+async function getLand(pnu, dong, ho) {
+  let err = '';
+  async function ned(op, extra) {
+    const u = `https://api.vworld.kr/ned/data/${op}?key=${KEYS.vw}&pnu=${pnu}&format=json&numOfRows=1000&pageNo=1${extra}`;
+    // 브이월드가 가끔 정상 키에도 INCORRECT_KEY 를 돌려줘서 몇 번 다시 시도한다
+    for (let i = 0; i < 4; i++) {
+      try {
+        const r = await jsonp(u);
+        const root = Object.values(r)[0] || {};
+        if (!root.resultCode || root.resultCode === 'OK' || root.resultCode === 'NORMAL_SERVICE') return arr(root.field);
+        err = `${root.resultCode} ${root.resultMsg || ''}`;
+      } catch (e) { err = e.message; }
+      await sleep(1200);
+    }
+    return [];
+  }
+  const yr = new Date().getFullYear();
+  async function byYear(op, extra, pick) {
+    for (const y of [yr, yr - 1]) {
+      const rows = pick(await ned(op, `&stdrYear=${y}${extra}`));
+      if (rows.length) return rows;
+    }
+    return [];
+  }
+  const [landChar, jiga, landUse, apt] = await Promise.all([
+    byYear('getLandCharacteristics', '', r => r),
+    byYear('getIndvdLandPriceAttr', '', r => r),
+    ned('getLandUseAttr', '&cnflcAt='),
+    ho ? byYear('getApartHousingPriceAttr', `&hoNm=${enc(ho)}`, r => r.filter(a =>
+      String(a.hoNm || '').replace(/호$/, '') === ho && (!dong || normDong(a.dongNm) === dong))) : Promise.resolve([])
+  ]);
+  return { landChar, jiga, landUse, apt, err };
+}
+
+// ---------- 주변 학교·교통 ----------
+async function getNear(x, y) {
+  async function vwNear(q, re, deg) {
+    try {
+      const r = await vwSearch(`size=1000&page=1&query=${enc(q)}&type=place&bbox=${x - deg},${y - deg},${x + deg},${y + deg}`);
+      if (r.response?.status !== 'OK') return [];
+      const seen = new Set();
+      return arr(r.response.result.items)
+        .filter(it => re.test(it.category))
+        .map(it => ({ name: it.title, dist: Math.round(distance(x, y, +it.point.x, +it.point.y)) }))
+        .sort((a, b) => a.dist - b.dist)
+        .filter(it => !seen.has(it.name) && seen.add(it.name))
+        .slice(0, 3);
+    } catch (e) { return []; }
+  }
+  async function vwExpand(q, re) {
+    for (const deg of [0.012, 0.03, 0.06]) { const n = await vwNear(q, re, deg); if (n.length) return n; }
+    return [];
+  }
+  // 카카오 키가 있으면 학교·지하철역은 카카오(거리순 정렬, 이름이 깔끔함)로 찾는다
+  async function kakaoNear(q, re) {
+    let list = [];
+    for (let page = 1; page <= 3 && list.length < 3; page++) {
+      const u = q === 'SW8'
+        ? `https://dapi.kakao.com/v2/local/search/category.json?category_group_code=SW8&x=${x}&y=${y}&radius=5000&sort=distance&size=15&page=${page}`
+        : `https://dapi.kakao.com/v2/local/search/keyword.json?query=${enc(q)}&category_group_code=SC4&x=${x}&y=${y}&radius=10000&sort=distance&size=15&page=${page}`;
+      let r;
+      try { r = await getJson(u, { Authorization: 'KakaoAK ' + KEYS.kakao }); } catch (e) { return null; }
+      // 부설 방송통신중·고, 분교 등은 확인설명서 기재 대상이 아니라 뺀다
+      list = list.concat(r.documents
+        .filter(d => re.test(d.category_name) && !/방송통신|부설|분교/.test(d.place_name))
+        .map(d => ({ name: d.place_name, dist: +d.distance })));
+      if (r.meta.is_end) break;
+    }
+    return list.sort((a, b) => a.dist - b.dist).slice(0, 3);
+  }
+  const k = KEYS.kakao;
+  const [elemK, midK, highK, subK, bus] = await Promise.all([
+    k ? kakaoNear('초등학교', /> 초등학교/) : null,
+    k ? kakaoNear('중학교', /> 중학교/) : null,
+    k ? kakaoNear('고등학교', /> 고등학교/) : null,
+    k ? kakaoNear('SW8', /지하철/) : null,
+    vwNear('정류장', /정류장/, 0.006).then(b => b.length ? b : vwNear('정류장', /정류장/, 0.015))
+  ]);
+  const [elem, mid, high, subway] = await Promise.all([
+    elemK?.length ? elemK : vwExpand('초등학교', /초등학교$/),
+    midK?.length ? midK : vwExpand('중학교', /중학교$/),
+    highK?.length ? highK : vwExpand('고등학교', /고등학교$/),
+    subK?.length ? subK : vwExpand('지하철역', /지하철역/)
+  ]);
+  return { elem, mid, high, subway, bus };
+}
+
+// ---------- 화면 ----------
+function render(R) {
+  const t = R.bld.title || {}, recap = R.bld.recap, expos = R.bld.expos || [];
+  const L = R.land;
+  const jeon = expos.filter(e => String(e.exposPubuseGbCd) === '1');
+  const gong = expos.filter(e => String(e.exposPubuseGbCd) !== '1');
+  const sum = a => a.reduce((s, e) => s + (+e.area || 0), 0);
+  const jeonArea = jeon.length ? Math.round(sum(jeon) * 100) / 100 : '';
+  const gongArea = gong.length ? Math.round(sum(gong) * 10000) / 10000 : '';
+  const unitUse = jeon.length ? ((jeon[0].etcPurps || '').trim() || jeon[0].mainPurpsCdNm) : '';
+  // 호 단위 용도가 있으면 그것으로 판단한다 (오피스텔 건물 안의 다세대 호실 등)
+  const isOffi = /오피스텔/.test(unitUse || t.etcPurps || '');
+  const ua = String(t.useAprDay || '');
+  const useAprTxt = ua.length >= 6 ? `${ua.slice(0, 4)}.${+ua.slice(4, 6)}` : '';
+  const quake = { '1': '적용', '0': '미적용' }[String(t.rserthqkDsgnApplyYn)] || '';
+  // 단지형은 동별 표제부에 대지면적·주차대수가 0이라 총괄표제부 값을 쓴다
+  let parking = ['indrAutoUtcnt', 'oudrAutoUtcnt', 'indrMechUtcnt', 'oudrMechUtcnt'].reduce((s, f) => s + (+t[f] || 0), 0);
+  if (!parking && recap?.totPkngCnt) parking = +recap.totPkngCnt;
+  const platArea = +t.platArea > 0 ? t.platArea : (recap && +recap.platArea > 0 ? recap.platArea : (L.landChar[0]?.lndpclAr || ''));
+  const jimok = L.landChar[0]?.lndcgrCodeNm || '';
+  const jiga = L.jiga[0], apt = L.apt[0];
+  const fmt = n => n ? Number(n).toLocaleString('ko-KR') : '';
+
+  let disp = `${R.parcelAddr} ${t.bldNm || ''}`.trim();
+  if (R.dong) disp += ` ${R.dong}동`;
+  if (R.ho) disp += ` ${R.ho}호`;
+
+  let h = '';
+  const row = (label, value, note = '') => {
+    const v = String(value ?? '');
+    let cell = v ? `<span class="v">${esc(v)}</span><button type="button" data-v="${esc(v)}">복사</button>` : `<span class="need">직접 확인</span>`;
+    if (note) cell += `<div class="note">${note}</div>`;
+    h += `<tr><th>${esc(label)}</th><td>${cell}</td></tr>`;
+  };
+  const sec = title => { h += `<h2>${esc(title)}</h2><table>`; };
+  const end = () => { h += '</table>'; };
+  const noteRow = html => { h += `<tr><td colspan="2" class="note">${html}</td></tr>`; };
+  const nearRow = (label, list, trim) => {
+    if (!list?.length) return row(label, '', '주변에서 찾지 못했습니다');
+    const f = list[0];
+    const mm = f.name.match(trim);
+    const name = mm && mm[1] ? mm[1] : f.name.replace(trim, '');
+    let note = `직선 ${f.dist}m · ${trip(f.dist)}`;
+    if (name !== f.name && f.name !== name + '학교') note = `${esc(f.name)} · ${note}`;
+    const others = list.slice(1).map(o => `${esc(o.name)} ${o.dist}m`).join(', ');
+    if (others) note += `<br>다른 후보: ${others}`;
+    row(label, name, note);
+  };
+  const link = (url, text) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${text}</a>`;
+
+  if (R.bld.error) h += `<div class="warn">건축물대장 조회 실패: ${esc(R.bld.error)}. 공공데이터포털 인증키를 확인하세요.</div>`;
+  const nedMissing = !jiga || !L.landUse.length || !jimok || (R.ho && !isOffi && !apt);
+  if (L.err && nedMissing) h += `<div class="warn">브이월드 조회 일부 실패: ${esc(L.err)}. 비어 있는 칸은 잠시 후 다시 조회하거나 링크된 사이트에서 확인하세요.</div>`;
+
+  sec('① 대상물건의 표시');
+  row('소재지', disp, roadAddr(R));
+  row('토지 면적(㎡)', platArea, '건축물대장 대지면적');
+  row('지목', jimok, jimok ? '' : '토지대장 확인');
+  row('전용면적(㎡)', jeonArea, R.ho && !jeon.length ? `${esc(R.ho)}호를 대장에서 찾지 못했습니다. 동/호 표기를 확인하세요.` : (gongArea ? `공용면적 합계 ${gongArea} ㎡` : ''));
+  row('대지지분', '', '등기부(대지권) 확인');
+  row('준공년도', useAprTxt, ua.length === 8 ? `사용승인일 ${ua.slice(0, 4)}-${ua.slice(4, 6)}-${ua.slice(6, 8)}` : '');
+  row('건축물대장상 용도', unitUse, t.etcPurps ? `건물 전체: ${esc(t.etcPurps)}` : '');
+  row('구조', t.strctCdNm);
+  row('방향', '', '현장 확인');
+  row('내진설계 적용여부', quake, quake === '미적용' ? '대장에 값이 비어 미적용으로 나오는 경우가 많습니다. 원본 대장 확인' : '');
+  row('내진능력', String(t.rserthqkAblty || '').trim());
+  row('위반건축물 여부', '', `${link('https://www.gov.kr/mw/AA020InfoCappView.do?HighCtgCD=A01010001&CappBizCD=15000000098', '정부24 건축물대장')}에서 위반 표시 확인`);
+  end();
+
+  sec('③ 토지이용계획');
+  if (L.landUse.length) {
+    // 포함이 아닌 저촉·접합은 이름 뒤에 표시
+    const names = [...new Set(L.landUse.filter(u => u.prposAreaDstrcCodeNm).map(u =>
+      u.cnflcAtNm && u.cnflcAtNm !== '포함' ? `${u.prposAreaDstrcCodeNm}(${u.cnflcAtNm})` : u.prposAreaDstrcCodeNm))];
+    const reArea = /^(제[123]종(전용|일반)주거|준주거|(중심|일반|근린|유통)상업|(전용|일반|준)공업|(보전|생산|자연)녹지|(보전|생산|계획)관리|농림|자연환경보전)지역/;
+    const reZone = /^(개발제한|도시자연공원|시가화조정|수산자원보호|입지규제최소)구역/;
+    const area = names.filter(n => reArea.test(n));
+    const zone = names.filter(n => reZone.test(n));
+    const permit = names.filter(n => /토지거래(계약에관한)?허가/.test(n));
+    const plan = names.filter(n => /지구단위계획/.test(n));
+    const fac = names.filter(n => /로\d류|도로|공원|광장|주차장/.test(n) && !/구역|지역|지구/.test(n));
+    const dist = names.filter(n => /지구(\(|$)/.test(n) && !/지구단위/.test(n));
+    const used = new Set([...area, ...zone, ...permit, ...plan, ...fac, ...dist]);
+    const etc = names.filter(n => !used.has(n));
+    row('용도지역', area.join(', '));
+    row('용도지구', dist.join(', '), dist.length ? '' : '조회 결과 없음 (해당없음 가능)');
+    row('용도구역', zone.join(', '), zone.length ? '' : '조회 결과 없음 (해당없음 가능)');
+    row('도시·군계획시설', fac.join(', '));
+    row('허가·신고 구역', permit.length ? '토지거래허가구역' : '', permit.length ? '' : '조회 결과 없음');
+    row('지구단위계획구역', plan.length ? '지구단위계획구역' : '', plan.length ? '' : '조회 결과 없음');
+    row('그 밖의 이용제한', etc.join(', '));
+    noteRow('투기지역·투기과열지구 여부는 이 자료에 없습니다. 국토교통부 고시로 확인하세요.');
+  } else {
+    row('용도지역·지구·구역', '', `조회하지 못했습니다. ${link('https://www.eum.go.kr/', '토지이음')}에서 확인`);
+  }
+  end();
+
+  const N = R.near;
+  sec('⑤ 입지조건');
+  nearRow('버스 정류장', N.bus, /\(?(?:버스)?정류장\)?$/);
+  nearRow('지하철역', N.subway, /^(.*?\S)역(\s.*|\d+번출입구)?$/);
+  nearRow('초등학교', N.elem, /학교$/);
+  nearRow('중학교', N.mid, /학교$/);
+  nearRow('고등학교', N.high, /학교$/);
+  row('주차대수(대장)', parking ? `${parking}대` : '', '전용/공동 여부는 현장 확인');
+  noteRow(`거리는 직선거리 기준 근사치입니다. 초등학교는 가장 가까운 곳과 배정학교가 다를 수 있으니 ${link('https://schoolzone.emac.kr/', '학구도안내서비스')}에서 확인하세요.`);
+  end();
+
+  sec('⑧ 거래예정금액 등 (임대차는 생략 가능)');
+  const priceLink = link('https://www.realtyprice.kr/', '부동산공시가격알리미');
+  row('개별공시지가(원/㎡)', fmt(jiga?.pblntfPclnd), jiga ? `${jiga.stdrYear}년 기준` : `${priceLink}에서 확인`);
+  if (isOffi) {
+    row('건물 기준시가(오피스텔)', '', `국세청 고시라 자동 조회 불가. ${link('https://hometax.go.kr/', '홈택스')} → 조회/발급 → 기준시가 조회 → 오피스텔`);
+  } else if (R.ho) {
+    row('공동주택가격(원)', fmt(apt?.pblntfPc), apt ? `${apt.stdrYear}년 기준` : `${priceLink}에서 확인`);
+  }
+  end();
+
+  const now = new Date();
+  const stamp = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+  $('out').innerHTML = `<div class="card"><p class="title">${esc(disp)}</p><div class="sub">조회일 ${stamp} · 지번코드 ${R.pnu} · 출처: 국토교통부 건축물대장, 브이월드${KEYS.kakao ? ', 카카오' : ''}</div></div>`
+    + h + '<p class="note">공적자료 자동조회 결과입니다. 확인설명서 작성 전 원본 공부와 대조하세요.</p>';
+}
+function roadAddr(R) { return R.roadAddr ? `도로명: ${esc(R.roadAddr)}` : ''; }
+
+// 복사 버튼
+$('out').addEventListener('click', e => {
+  const b = e.target.closest('button[data-v]');
+  if (!b) return;
+  const v = b.getAttribute('data-v');
+  const done = () => { const t = b.textContent; b.textContent = '복사됨'; setTimeout(() => { b.textContent = t; }, 1200); };
+  const fallback = () => {
+    const a = document.createElement('textarea');
+    a.value = v; document.body.appendChild(a); a.select();
+    try { document.execCommand('copy'); } catch (err) {}
+    a.remove(); done();
+  };
+  if (navigator.clipboard) navigator.clipboard.writeText(v).then(done, fallback); else fallback();
 });
 
-document.querySelectorAll('.scroll-reveal').forEach(el => {
-  observer.observe(el);
+$('f').addEventListener('submit', async e => {
+  e.preventDefault();
+  if (!KEYS.data || !KEYS.vw) { $('keys').hidden = false; setStatus('먼저 인증키를 저장하세요.'); return; }
+  const btn = e.submitter || $('f').querySelector('button');
+  btn.disabled = true;
+  $('out').innerHTML = '';
+  try {
+    const R = await lookup($('addr').value.trim(), $('dong').value.trim(), $('ho').value.trim());
+    render(R);
+    setStatus('');
+  } catch (err) {
+    setStatus('조회 실패: ' + err.message);
+  } finally {
+    btn.disabled = false;
+  }
 });
+
+loadKeys();
 </script>
-
-
-
-</body></html>
+</body>
+</html>
