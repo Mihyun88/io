@@ -56,7 +56,7 @@ a{color:var(--accent)}
     <label>공공데이터포털 인증키 (Encoding 키)<input id="kData" autocomplete="off" spellcheck="false"></label>
     <label>브이월드 인증키<input id="kVw" autocomplete="off" spellcheck="false"></label>
     <label>카카오 REST API 키 (선택, 학교·지하철역 검색이 더 정확해짐)<input id="kKakao" autocomplete="off" spellcheck="false"></label>
-    <p class="note">키는 이 브라우저에만 저장됩니다. 페이지 파일이나 GitHub에는 올라가지 않습니다.</p>
+    <p class="note">비워두면 사무실 기본 키를 씁니다. 다른 키를 쓰고 싶을 때만 입력하세요 (이 브라우저에만 저장).</p>
     <button class="primary" id="saveKeys" type="button">저장</button>
   </div>
 
@@ -79,11 +79,14 @@ const store = {
   get(k) { try { return localStorage.getItem(k) || ''; } catch (e) { return ''; } },
   set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
 };
+// 사무실 공용 기본 키 (자동 수집 봇이 바로 읽지 못하게 뒤집은 base64로 넣어둠, 보안 장치는 아님)
+const EMBED = JSON.parse(atob('==QfiAjYjJ2NmVTMhVmN3U2N1cDMxQ2MyMGMkFTZlRjZzQzYiojIvF2ahtmIsICMGlTMDRER4MjRGZUL5cTO50COGZDNtgzNycTLwITM2QjQGBjI6Iyd2JCLiQ0MlQ0MlEVUmJFS4E3SoJnbrdEa4oVN5dlNY5mQyUydyZVRZJlW20maRpUcF5WbStkZ4p0YT5mQ6lUePlUZvVHdSx0QIZkMlYkMl4kR0VjboRDZw5kekN2bWRmWWl3ZHRneiojIhRXYkJye'.split('').reverse().join('')));
 let KEYS = {};
+// 인증키 설정에 따로 저장한 키가 있으면 그걸 쓰고, 없으면 기본 키를 쓴다
 function loadKeys() {
-  KEYS = { data: store.get('gs_data'), vw: store.get('gs_vw'), kakao: store.get('gs_kakao') };
-  $('kData').value = KEYS.data; $('kVw').value = KEYS.vw; $('kKakao').value = KEYS.kakao;
-  if (!KEYS.data || !KEYS.vw) $('keys').hidden = false;
+  const s = { data: store.get('gs_data'), vw: store.get('gs_vw'), kakao: store.get('gs_kakao') };
+  KEYS = { data: s.data || EMBED.data, vw: s.vw || EMBED.vw, kakao: s.kakao || EMBED.kakao };
+  $('kData').value = s.data; $('kVw').value = s.vw; $('kKakao').value = s.kakao;
 }
 $('btnKeys').onclick = () => { $('keys').hidden = !$('keys').hidden; };
 $('saveKeys').onclick = () => {
